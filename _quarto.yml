@@ -13,11 +13,14 @@ book:
 
 bibliography: references.bib
 
+reference-location: margin
+citation-location: margin
+
 format:
   html:
     theme: cosmo
   pdf:
-    documentclass: scrreprt
+    include-in-header: preamble.tex
+    keep-tex: true
 
-editor: visual
-
+editor: source

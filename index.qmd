@@ -1,9 +1,56 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
+## Html version
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+<!-- this does NOT work in html without nesting -->
 
-```{r}
-1 + 1
-```
+::::{.content-hidden unless-format="html" .column-margin}
+:::{#fig-commencement}
+<iframe width='300' src='https://www.youtube.com/embed/491LFqvofxo?start=492' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+
+Here is a video.
+:::
+::::
+
+<!-- works in html with nesting -->
+
+:::::{.content-hidden unless-format="html"}
+::::{.column-margin}
+:::{#fig-commencement}
+<iframe width='300' src='https://www.youtube.com/embed/491LFqvofxo?start=492' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+
+Here is a video.
+:::
+::::
+:::::
+
+This non-nested version does not work. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+## PDF version
+
+<!-- does NOT work in pdf without nesting -->
+
+:::{.content-hidden unless-format="pdf" .column-margin}
+\faIcon{youtube} Scan the QR code to watch a video \href{http://ghr.link/uni}{\footnotesize\texttt{ghr.link/uni}}.
+\newline
+\newline
+![](images/QR_uni.png){width="75px"}
+:::
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+<!-- works in pdf -->
+
+::::{.content-hidden unless-format="pdf" }
+:::{.column-margin}
+\faIcon{youtube} Scan the QR code to watch a video \href{http://ghr.link/uni}{\footnotesize\texttt{ghr.link/uni}}.
+\newline
+\newline
+![](images/QR_uni.png){width="75px"}
+:::
+::::
+
+This nesting works, though the sidenote starts a bit lower than expected, and I'm not sure how to center the QR code. Adding fig-align to the brackets does not work.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
